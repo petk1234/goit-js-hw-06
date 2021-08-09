@@ -67,7 +67,7 @@ const getSortedUniqueSkills = users => {
     const sortedSkills = users
       .reduce((acc, { skills }) => [...acc, ...skills], []);
   
-    return (sortedSkills);
+    return ([... new Set(sortedSkills)]);
   };
   
   console.log('Задание 10');
